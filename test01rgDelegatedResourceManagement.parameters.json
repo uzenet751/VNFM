@@ -1,0 +1,41 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "mspOfferName": {
+            "value": "VNFM in Public Clouds"
+        },
+        "rgName": {
+            "value": "test"
+        },
+        "mspOfferDescription": {
+            "value": "Delegated Resource Group Management"
+        },
+        "managedByTenantId": {
+            "value": "0f312809-757f-41f0-a70a-25e938083e84"
+        },
+        "authorizations": {
+            "value": [
+                { 
+                    "principalId": "f629397b-19bd-4de2-8308-cd47112d766b", 
+                    "roleDefinitionId": "b24988ac-6180-42a0-ab88-20f7382dd24c",
+                    "principalIdDisplayName": "VNFM Owners Contributor Support" 
+                }, 
+                { 
+                    "principalId": "f629397b-19bd-4de2-8308-cd47112d766b", 
+                    "roleDefinitionId": "36243c78-bf99-498c-9df9-86d9f8d28608",
+                    "principalIdDisplayName": "VNFM Owners Policy Contributor Support" 
+                },   
+				{
+                    "principalId": "f629397b-19bd-4de2-8308-cd47112d766b",
+                    "principalIdDisplayName": "VNFM Owers Policy Automation Account",
+                    "roleDefinitionId": "18d7d88d-d35e-4fb5-a5c3-7773c20a72d9",
+                    "delegatedRoleDefinitionIds": [
+                        "b24988ac-6180-42a0-ab88-20f7382dd24c",
+                        "92aaf0da-9dab-42b6-94a3-d43ce8d16293"
+                    ]
+                }      
+            ]
+        }
+    }
+}
